@@ -1,23 +1,21 @@
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Solid from './components/Solid'
 
 function App() {
+  const [elements, setElements] = useState(
+    [
+      { type: "plasma", name: "lightning"},
+      { type: "plasma", name: "sun"},
+      { type: "plasma", name: "stars"},
+  ]
+  
+  )
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Solid />
     </div>
   );
 }
